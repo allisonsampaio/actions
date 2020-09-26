@@ -1,3 +1,3 @@
-def fun(message):
+def fun():
     print("Hello world!")
-    print(message)
+fun()
