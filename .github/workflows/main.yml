@@ -17,11 +17,13 @@ jobs:
 
       - name: Modifiy the specific files using scripts
         run: |
-            python helloworld.py ${{ github.event.comment.body }}
+            python helloworld.py ${{ github.event }}
 
       - name: GitHub Event
         run: |
-          cat ${{ toJSON(github.event) }} >> file.json
+          cat << 'EOF'
+            ${{ toJSON(github.event) }}
+          EOF
 
       - name: Commit and push changes
         run: |
