@@ -27,7 +27,7 @@ jobs:
         run: |
           cat << 'EOF'
             ${{ toJSON(github.event) }}
-          EOF
+          EOF > teste.json
       
 # If you execute some shell scripts or command lines to modify
 # the files, use the 'run' key.
