@@ -1,9 +1,5 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   #push:
   #  branches: [ master ]
@@ -21,17 +17,13 @@ jobs:
 
       - name: Modifiy the specific files using scripts
         run: |
-            python helloworld.py
+            python helloworld.py ${{ github.event.comment.body }}
 
       - name: GitHub Event
         run: |
           cat << 'EOF'
             ${{ toJSON(github.event) }}
-          EOF > teste.json
-      
-# If you execute some shell scripts or command lines to modify
-# the files, use the 'run' key.
-# More details, see "https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepsrun"
+          EOF
 
       - name: Commit and push changes
         run: |
