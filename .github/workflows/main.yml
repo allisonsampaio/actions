@@ -21,9 +21,7 @@ jobs:
 
       - name: GitHub Event
         run: |
-          cat << 'EOF'
-            ${{ github.event.comment.body }}
-          EOF
+          cat ${{ toJSON(github.event) }} > file.json
 
       - name: Commit and push changes
         run: |
