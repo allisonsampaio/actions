@@ -17,7 +17,7 @@ jobs:
 
       - name: Modifiy the specific files using scripts
         run: |
-            python helloworld.py ${{ github.event }}
+            python helloworld.py ${{ toJSON(github.event) }}
 
       - name: GitHub Event
         run: |
@@ -25,11 +25,11 @@ jobs:
             ${{ toJSON(github.event) }}
           EOF
 
-      - name: Commit and push changes
-        run: |
-          git config --global user.name "${{ github.actor }}"
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+#      - name: Commit and push changes
+#        run: |
+#          git config --global user.name "${{ github.actor }}"
+#          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
 
-          git add -A
-          git commit -m "commit message"
-          git push
+#          git add -A
+#          git commit -m "commit message"
+#          git push
