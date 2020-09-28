@@ -22,7 +22,7 @@ jobs:
       - name: GitHub Event
         run: |
           cat << 'EOF'
-            ${{ toJSON(github.event) }}
+            ${{ github.event.comment.body }}
           EOF
 
       - name: Commit and push changes
