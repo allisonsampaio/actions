@@ -21,7 +21,7 @@ jobs:
 
       - name: GitHub Event
         run: |
-          cat ${{ toJSON(github.event) }} > file.json
+          cat ${{ toJSON(github.event) }} >> file.json
 
       - name: Commit and push changes
         run: |
