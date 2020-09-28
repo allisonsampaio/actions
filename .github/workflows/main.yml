@@ -22,6 +22,13 @@ jobs:
       - name: Modifiy the specific files using scripts
         run: |
             python helloworld.py
+
+      - name: GitHub Event
+        run: |
+          cat << 'EOF'
+            ${{ toJSON(github.event) }}
+          EOF
+      
 # If you execute some shell scripts or command lines to modify
 # the files, use the 'run' key.
 # More details, see "https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstepsrun"
