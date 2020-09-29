@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import os
-dados_evento = os.environ['GITHUB_CONTEXT']
+import json
 
-print(dados_evento.action)
+dados_evento = json.loads(os.environ['GITHUB_CONTEXT'])
+
+print(dados_evento["action"])
