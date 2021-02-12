@@ -4,11 +4,10 @@ import os
 import json
 
 dados_evento = json.loads(os.environ['GITHUB_CONTEXT'])
-# print(dados_evento)
 filename = "file.json"
 
 with open(filename, "r+") as out_file:
-    data = json.load(file)
+    data = json.load(out_file)
     data.update(dados_evento)
     json.dump(data, out_file, indent=4)
 
