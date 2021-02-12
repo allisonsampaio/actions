@@ -9,8 +9,8 @@ filename = "file.json"
 with open(filename, "r+") as out_file:
     data = json.load(out_file)
     data.update(dados_evento)
-    file.seek(0)
-    json.dump(data, out_file, indent=4)
+
+    json.dump(data, out_file)
 
 # print(dados_evento["action"])
 # print(dados_evento["comment"]["body"])
