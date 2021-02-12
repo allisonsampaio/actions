@@ -10,7 +10,7 @@ with open(filename, "r+") as out_file:
     data = json.load(out_file)
     data.append(dados_evento)
 
-    json.dump(data, out_file)
+    json.dump(data, out_file, indent=4)
 
 # print(dados_evento["action"])
 # print(dados_evento["comment"]["body"])
