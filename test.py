@@ -8,7 +8,7 @@ filename = "file.json"
 
 with open(filename, "r+") as out_file:
     data = json.load(out_file)
-    data.update(dados_evento)
+    data.append(dados_evento)
 
     json.dump(data, out_file)
 
