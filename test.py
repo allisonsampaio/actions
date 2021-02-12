@@ -8,7 +8,9 @@ dados_evento = json.loads(os.environ['GITHUB_CONTEXT'])
 filename = "file.json"
 
 with open(filename, "r+") as out_file:
-    json.dump(dados_evento, out_file, indent=4)
+    data = json.load(file)
+    data.update(dados_evento)
+    json.dump(data, out_file, indent=4)
 
 # print(dados_evento["action"])
 # print(dados_evento["comment"]["body"])
