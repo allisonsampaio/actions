@@ -22,7 +22,7 @@ jobs:
       - name: pass env variable to python
         env: 
           GITHUB_CONTEXT: ${{ toJson(github.event) }}
-        run: python test.py
+        run: python data/store_events.py
 
       - name: Commit and push changes
         run: |
