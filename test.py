@@ -8,7 +8,7 @@ def write_json(data, filename='data.json'):
         json.dump(data, f, indent=4) 
       
       
-with open('file.json') as json_file: 
+with open('data.json') as json_file: 
     data = json.load(json_file) 
     temp = data['lista_eventos'] 
     novo_evento = json.loads(os.environ['GITHUB_CONTEXT'])
