@@ -1,11 +1,11 @@
 name: CI
 
 on:
-  #push:
-  #  branches: [ master ]
-  
+  issues:
+    types: [opened]
+
   issue_comment:
-    types: [created, deleted]
+    types: [created]
 
 jobs:
   job1:
@@ -14,10 +14,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2.3.2
-
-      # - name: Modifiy the specific files using scripts
-      #   run: |
-      #       python helloworld.py ${{ github.event }}
 
       - name: pass env variable to python
         env: 
