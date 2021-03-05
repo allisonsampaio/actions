@@ -13,7 +13,7 @@ novo_evento = json.loads(os.environ['GITHUB_CONTEXT'])
 
 with open('data/events.json') as json_file:
     data = json.load(json_file)
-    temp = data['lista_eventos']
+    temp = data['events']
     temp.append(novo_evento)
 write_json(data)
 
