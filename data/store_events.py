@@ -4,14 +4,14 @@ import os
 import json
 
 
-def write_json(data, filename='data/data.json'):
+def write_json(data, filename='data/events.json'):
     with open(filename, 'w') as f:
         json.dump(data, f, indent=4)
 
 
 novo_evento = json.loads(os.environ['GITHUB_CONTEXT'])
 
-with open('data/data.json') as json_file:
+with open('data/events.json') as json_file:
     data = json.load(json_file)
     temp = data['lista_eventos']
     temp.append(novo_evento)
