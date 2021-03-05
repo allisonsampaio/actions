@@ -18,7 +18,7 @@ with open('data/events.json') as json_file:
 write_json(data)
 
 
-with open('users.json') as json_users:
+with open('data/users.json') as json_users:
     users = json.load(json_users)
     exist_user = False
 
@@ -26,7 +26,7 @@ with open('users.json') as json_users:
         if(u['id'] == novo_evento['sender']['id']):
             u['coins'] = u['coins'] + 1
             exist_user = True
-            with open('users.json', 'w') as js:
+            with open('data/users.json', 'w') as js:
                 json.dump(users, js, indent=4)
             break
 
@@ -39,5 +39,5 @@ with open('users.json') as json_users:
             "coins": 1
         }
         users['users'].append(new_user)
-        with open('users.json', 'w') as js:
+        with open('data/users.json', 'w') as js:
             json.dump(users, js, indent=4)
