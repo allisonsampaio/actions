@@ -24,7 +24,7 @@ with open('data/users.json') as json_users:
 
     for u in users['users']:
         if(u['id'] == novo_evento['sender']['id']):
-            u['coins'] = u['coins'] + 1
+            u['points'] = u['points'] + 1
             exist_user = True
             with open('data/users.json', 'w') as js:
                 json.dump(users, js, indent=4)
@@ -36,7 +36,7 @@ with open('data/users.json') as json_users:
             "login": novo_evento['sender']['login'],
             "avatar_url": novo_evento['sender']['avatar_url'],
             "html_url": novo_evento['sender']['html_url'],
-            "coins": 1
+            "points": 1
         }
         users['users'].append(new_user)
         with open('data/users.json', 'w') as js:

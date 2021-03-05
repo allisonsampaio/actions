@@ -2,14 +2,14 @@
     "users": [
         {
             "login": "allisonsampaio", 
-            "coins": 5, 
+            "points": 5, 
             "id": 19801532, 
             "html_url": "https://github.com/allisonsampaio", 
             "avatar_url": "https://avatars.githubusercontent.com/u/19801532?v=4"
         }, 
         {
             "login": "magsilva", 
-            "coins": 1, 
+            "points": 1, 
             "id": 4087248, 
             "html_url": "https://github.com/magsilva", 
             "avatar_url": "https://avatars.githubusercontent.com/u/4087248?v=4"
