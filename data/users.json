@@ -2,17 +2,17 @@
     "users": [
         {
             "login": "allisonsampaio", 
-            "points": 12, 
+            "points": 13, 
             "id": 19801532, 
-            "avatar_url": "https://avatars.githubusercontent.com/u/19801532?v=4", 
-            "html_url": "https://github.com/allisonsampaio"
+            "html_url": "https://github.com/allisonsampaio", 
+            "avatar_url": "https://avatars.githubusercontent.com/u/19801532?v=4"
         }, 
         {
             "login": "magsilva", 
             "points": 1, 
             "id": 4087248, 
-            "avatar_url": "https://avatars.githubusercontent.com/u/4087248?v=4", 
-            "html_url": "https://github.com/magsilva"
+            "html_url": "https://github.com/magsilva", 
+            "avatar_url": "https://avatars.githubusercontent.com/u/4087248?v=4"
         }
     ]
 }
