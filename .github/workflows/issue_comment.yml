@@ -1,9 +1,6 @@
 name: CI
 
 on:
-  issues:
-    types: [opened]
-
   issue_comment:
     types: [created]
 
@@ -18,7 +15,7 @@ jobs:
       - name: pass env variable to python
         env: 
           GITHUB_CONTEXT: ${{ toJson(github.event) }}
-        run: python data/store_events.py
+        run: python data/store_issue_comment.py
 
       - name: Commit and push changes
         run: |
