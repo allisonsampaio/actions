@@ -1,18 +1,24 @@
 {
     "users": [
         {
-            "login": "allisonsampaio", 
-            "points": 13, 
-            "id": 19801532, 
-            "html_url": "https://github.com/allisonsampaio", 
-            "avatar_url": "https://avatars.githubusercontent.com/u/19801532?v=4"
-        }, 
+            "login": "allisonsampaio",
+            "id": 19801532,
+            "html_url": "https://github.com/allisonsampaio",
+            "avatar_url": "https://avatars.githubusercontent.com/u/19801532?v=4",
+            "events": {
+                "issue": 0,
+                "issue_comment": 0
+            }
+        },
         {
-            "login": "magsilva", 
-            "points": 1, 
-            "id": 4087248, 
-            "html_url": "https://github.com/magsilva", 
-            "avatar_url": "https://avatars.githubusercontent.com/u/4087248?v=4"
+            "login": "magsilva",
+            "id": 4087248,
+            "html_url": "https://github.com/magsilva",
+            "avatar_url": "https://avatars.githubusercontent.com/u/4087248?v=4",
+            "events": {
+                "issue": 0,
+                "issue_comment": 0
+            }
         }
     ]
 }
