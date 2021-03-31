@@ -3,6 +3,25 @@
 import os
 import json
 
+def update_issue(user):
+    with open('data/issue.json') as json_file:
+        data = json.load(json_file)
+        temp = data['events']
+        for issue in temp['issue']:
+            if user['id'] == issue['sender']['id']:
+                user['events']['issue'] += 1
+    return user
+
+
+def update_issue_comment(user):
+    with open('data/issue_comment.json') as json_file:
+        data = json.load(json_file)
+        temp = data['events']
+        for issue_comment in temp['issue_comment']:
+            if user['id'] == issue_comment['sender']['id']:
+                user['events']['issue_comment'] += 1
+    return user
+
 # with open('events.json') as json_file:
 #    data = json.load(json_file)
 #    temp = data['events']
@@ -37,23 +56,3 @@ with open('data/users.json') as json_users:
 #        users['users'].append(new_user)
 #        with open('users.json', 'w') as js:
 #            json.dump(users, js, indent=4)
-
-
-def update_issue(user):
-    with open('data/issue.json') as json_file:
-        data = json.load(json_file)
-        temp = data['events']
-        for issue in temp['issue']:
-            if user['id'] == issue['sender']['id']:
-                user['events']['issue'] += 1
-    return user
-
-
-def update_issue_comment(user):
-    with open('data/issue_comment.json') as json_file:
-        data = json.load(json_file)
-        temp = data['events']
-        for issue_comment in temp['issue_comment']:
-            if user['id'] == issue_comment['sender']['id']:
-                user['events']['issue_comment'] += 1
-    return user
