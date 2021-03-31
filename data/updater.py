@@ -15,14 +15,14 @@ import json
 # print(list(event.keys())[1])
 # print('\n')
 
-with open('users.json') as json_users:
+with open('data/users.json') as json_users:
     users = json.load(json_users)
     #exist_user = False
 
     for u in users['users']:
         update_issue(u)
         update_issue_comment(u)
-        with open('users.json', 'w') as js:
+        with open('data/users.json', 'w') as js:
             json.dump(users, js, indent=4)
         break
 
@@ -40,7 +40,7 @@ with open('users.json') as json_users:
 
 
 def update_issue(user):
-    with open('issue.json') as json_file:
+    with open('data/issue.json') as json_file:
         data = json.load(json_file)
         temp = data['events']
         for issue in temp['issue']:
@@ -50,7 +50,7 @@ def update_issue(user):
 
 
 def update_issue_comment(user):
-    with open('issue_comment.json') as json_file:
+    with open('data/issue_comment.json') as json_file:
         data = json.load(json_file)
         temp = data['events']
         for issue_comment in temp['issue_comment']:
