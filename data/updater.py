@@ -7,6 +7,7 @@ def update_issue(user):
     with open('data/issue.json') as json_file:
         data = json.load(json_file)
         temp = data['issue']
+        user['events']['issue'] = 0
         for issue in temp:
             if user['id'] == issue['sender']['id']:
                 user['events']['issue'] += 1
@@ -16,6 +17,7 @@ def update_issue_comment(user):
     with open('data/issue_comment.json') as json_file:
         data = json.load(json_file)
         temp = data['issue_comment']
+        user['events']['issue_comment'] = 0
         for issue_comment in temp:
             if user['id'] == issue_comment['sender']['id']:
                 user['events']['issue_comment'] += 1
