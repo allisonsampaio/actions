@@ -3,17 +3,17 @@
 import os
 import json
 
-#with open('events.json') as json_file:
+# with open('events.json') as json_file:
 #    data = json.load(json_file)
 #    temp = data['events']
 #    for event in temp:
-        #print(event['sender']['id'])
-        #print(event['sender']['login'])
-        #print(event['sender']['avatar_url'])
-        #print(event['sender']['html_url'])
-        #print(event['action'])
-        #print(list(event.keys())[1])
-        #print('\n')
+# print(event['sender']['id'])
+# print(event['sender']['login'])
+# print(event['sender']['avatar_url'])
+# print(event['sender']['html_url'])
+# print(event['action'])
+# print(list(event.keys())[1])
+# print('\n')
 
 with open('users.json') as json_users:
     users = json.load(json_users)
@@ -38,6 +38,7 @@ with open('users.json') as json_users:
 #        with open('users.json', 'w') as js:
 #            json.dump(users, js, indent=4)
 
+
 def update_issue(user):
     with open('issue.json') as json_file:
         data = json.load(json_file)
@@ -46,6 +47,7 @@ def update_issue(user):
             if user['id'] == issue['sender']['id']:
                 user['events']['issue'] += 1
     return user
+
 
 def update_issue_comment(user):
     with open('issue_comment.json') as json_file:
