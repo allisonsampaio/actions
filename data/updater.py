@@ -23,18 +23,6 @@ def update_issue_comment(user):
                 user['events']['issue_comment'] += 1
     return user
 
-# with open('events.json') as json_file:
-#    data = json.load(json_file)
-#    temp = data['events']
-#    for event in temp:
-# print(event['sender']['id'])
-# print(event['sender']['login'])
-# print(event['sender']['avatar_url'])
-# print(event['sender']['html_url'])
-# print(event['action'])
-# print(list(event.keys())[1])
-# print('\n')
-
 with open('data/users.json') as json_users:
     users = json.load(json_users)
     #exist_user = False
